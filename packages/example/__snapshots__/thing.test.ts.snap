@@ -2,6 +2,6 @@
 
 exports[`thing doThing should return thing string 1`] = `
 {
-    "stuff": "thing string",
+  "stuff": "thing string",
 }
 `;
