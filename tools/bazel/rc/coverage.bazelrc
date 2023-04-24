@@ -1,0 +1,1 @@
+coverage --instrument_test_targets

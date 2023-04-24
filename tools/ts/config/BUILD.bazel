@@ -1,0 +1,26 @@
+load("//tools/bazel:rules.bzl", "ts_config")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_config(
+    name = "bazel",
+    src = "tsconfig.bazel.json"
+)
+
+ts_config(
+    name = "common",
+    src = "tsconfig.common.json",
+    deps = [":bazel"],
+)
+
+ts_config(
+    name = "jest",
+    src = "tsconfig.jest.json",
+    deps = [":common"],
+)
+
+ts_config(
+    name = "node",
+    src = "tsconfig.node.json",
+    deps = [":common"],
+)

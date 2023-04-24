@@ -1,0 +1,28 @@
+load(
+  "//tools/bazel:rules.bzl",
+  "ts_project",
+  "jest_test",
+)
+
+test_files = [
+  "*.test.ts",
+]
+
+ts_project(
+    name = "example",
+    srcs = glob(
+      include = [
+        "*.ts",
+      ],
+      exclude = test_files,
+    ),
+)
+
+jest_test(
+    name = "example_test",
+    srcs = glob(
+      include = test_files
+    ),
+    deps = [":example"],
+    snapshots = True,
+)

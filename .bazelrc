@@ -1,0 +1,29 @@
+# Import Aspect recommended Bazel convenience settings for all projects
+import %workspace%/tools/bazel/rc/convenience.bazelrc
+
+# Import Aspect recommended Bazel correctness settings for all projects
+import %workspace%/tools/bazel/rc/correctness.bazelrc
+
+# Import Aspect recommended Bazel 6 coverage settings for all projects
+import %workspace%/tools/bazel/rc/coverage.bazelrc
+
+# Import Aspect recommended Bazel performance settings for all projects
+import %workspace%/tools/bazel/rc/performance.bazelrc
+
+# Import Aspect recommended Bazel debug settings for all projects
+import %workspace%/tools/bazel/rc/debug.bazelrc
+
+# Import Aspect recommended Bazel javascript settings for all projects
+import %workspace%/tools/bazel/rc/javascript.bazelrc
+
+# Import Aspect recommended Bazel 6 settings for all projects
+import %workspace%/tools/bazel/rc/bazel6.bazelrc
+
+
+### YOUR PROJECT SPECIFIC SETTINGS GO HERE ###
+
+# Load any settings & overrides specific to the current user from `tools/bazel/rc/user.bazelrc`.
+# This file should appear in `.gitignore` so that settings are not shared with team members. This
+# should be last statement in this config so the user configuration is able to overwrite flags from
+# this file. See https://bazel.build/configure/best-practices#bazelrc-file.
+try-import %workspace%/tools/bazel/rc/user.bazelrc

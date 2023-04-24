@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "incremental": true,
+    "composite": true,
+    "importHelpers": true,
+    "baseUrl": "../../../",
+    "rootDirs": [
+      "../../..",
+      "../../../bazel-out/darwin-opt-exec-2B5CBBC6-ST-625e526ca8a8/bin",
+      "../../../bazel-out/darwin-opt-exec-2B5CBBC6/bin",
+      "../../../bazel-out/k8-fastbuild/bin",
+      "../../../bazel-out/x64_windows-fastbuild/bin",
+      "../../../bazel-out/x64_windows-dbg/bin",
+      "../../../bazel-out/k8-dbg/bin",
+      "../../../bazel-out/host/bin",
+      "../../../bazel-out/darwin-fastbuild/bin",
+      "../../../bazel-out/darwin-dbg/bin"
+    ],
+    "paths": {
+      "tslib": ["../../../node_modules/tslib/tslib.d.ts"],
+      "//*": [
+        "*",
+        "bazel-out/darwin-opt-exec-2B5CBBC6-ST-625e526ca8a8/bin/*",
+        "bazel-out/darwin-opt-exec-2B5CBBC6/bin/*",
+        "bazel-out/k8-fastbuild/bin/*",
+        "bazel-out/x64_windows-fastbuild/bin/*",
+        "bazel-out/x64_windows-dbg/bin/*",
+        "bazel-out/k8-dbg/bin/*",
+        "bazel-out/host/bin/*",
+        "bazel-out/darwin-fastbuild/bin/*",
+        "bazel-out/darwin-dbg/bin/*"
+      ]
+    },
+    "typeRoots": ["../../../node_modules/@types", "**/@types", "../../../packages/@types"]
+  },
+
+  "include": ["../../../**/*"],
+  "exclude": ["../../../node_modules", "**/node_modules/*", "../../../external/*", "../../../dist/*"]
+}

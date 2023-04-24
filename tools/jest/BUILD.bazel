@@ -1,0 +1,17 @@
+load(
+  "//tools/js:rules.bzl",
+  "js_library",
+)
+
+
+js_library(
+  name = "snapshot_resolver",
+  srcs = ["snapshotResolver.js"],
+)
+
+js_library(
+  name = "jest_config",
+  srcs = ["jest.config.js"],
+  deps = [":snapshot_resolver"],
+  visibility = ["//visibility:public"],
+)

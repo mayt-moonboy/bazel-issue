@@ -1,0 +1,11 @@
+{
+  "extends": "./tools/ts/config/tsconfig.common.json",
+  "compilerOptions": {
+    "types": ["jest", "node", "reflect-metadata"],
+    "jsx": "react-jsx",
+    "paths": {
+      "//*": ["*"],
+    }
+  },
+  "exclude": ["node_modules", "bazel-*"]
+}

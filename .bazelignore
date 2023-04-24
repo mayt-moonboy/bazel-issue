@@ -1,0 +1,10 @@
+.bazelisk
+.github
+.jetbrains
+.run
+.vscode
+common
+docker
+janus
+scripts
+node_modules
